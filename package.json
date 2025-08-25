@@ -1,0 +1,9 @@
+{
+  "name": "api-nodejs-puro",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node src/server.js"
+  }
+}
