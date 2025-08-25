@@ -33,8 +33,8 @@ export const routes = [
         title,
         description,
         completed_at: null,
-        createdAt: now,
-        updatedAt: now,
+        created_at: now,
+        updated_at: now,
       }
 
       tasks.push(task)
@@ -63,7 +63,7 @@ export const routes = [
         ...task,
         title: title ?? task.title,
         description: description ?? task.description,
-        updatedAt: new Date().toISOString(),
+        updated_at: new Date().toISOString(),
       }
 
       return sendJSON(res, 200, tasks[taskIndex])
@@ -87,8 +87,8 @@ export const routes = [
 
       tasks[taskIndex] = {
         ...tasks[taskIndex],
-        completedAt: new Date().toISOString(),
-        updatedAt: new Date().toISOString(),
+        completed_at: new Date().toISOString(),
+        updated_at: new Date().toISOString(),
       }
 
       return sendJSON(res, 204)
